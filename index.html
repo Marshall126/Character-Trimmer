@@ -6,12 +6,12 @@
     
   </head>
   <body>
-    <form class="naGot">
+    <form class="naGot" onsubmit="return false">
         Text to be trimmed <br>
-        <input class="name" type="text">
-        <button class="nameButton"></button>
+        <input id="test" type="text">
+        <input type="submit" class="nameButton"></button>
     </form>
-    <div id="result">
+    <div id="result" style="height:fit-content; background-color:blue"></div>
             <script
             src="https://code.jquery.com/jquery-3.3.1.min.js"
             integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="

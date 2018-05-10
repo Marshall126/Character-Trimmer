@@ -1,10 +1,7 @@
 $(document).ready(function(){
-    $('.nameButton').click(()=>{
-        let nameGot = $('.name').value;
-        alert(nameGot);
+    $('.nameButton').click(function(){
+        let nameGot = document.getElementById("test");
+        console.log(nameGot.value);
+        $('#result').value='nameGot.value';
     });
 })
-function getName(){
-    
-    return $(nameGot)
-}
