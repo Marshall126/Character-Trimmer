@@ -6,13 +6,10 @@ $(document).ready(function(){
         const NAME_GOT = document.getElementById("trimText");
         const NAME_ARR = [...NAME_GOT.value];
         let spamMess = [];
-        console.log(NAME_ARR.length);
         for(let i=0; i<NAME_ARR.length;i+=chrCont){
             spamMess.push([NAME_ARR.slice(i,chrCont+i)]);
             console.log(spamMess[i/chrCont]);
-            let spamFin = spamMess[i/chrCont].join('');
-            //spamFin.join();
-            console.log(spamFin);
+            let spamFin = spamMess[i/chrCont][0].join('');
             let spamDispl = `<li class="spam">${spamFin}</li>`;
             $('#spamCont').append(spamDispl);
         }
