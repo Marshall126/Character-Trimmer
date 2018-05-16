@@ -1,5 +1,4 @@
 body{
-    background-color:rgba(179, 55, 55, 0.664);
     margin:15px;
 }
 
@@ -10,6 +9,24 @@ form textarea#trimText{
     height:300px;
     outline-width:0;
     padding:10px;
+    border:none;
+    resize: none;
+    background-color:rgba(25, 202, 173,0.5);
+}
+form button.nameButton{
+    height:20px;
+    width:50px;
+    border:none;
+    border-radius:10px;
+    position:relative;
+    color:white;
+    top:15px;
+    cursor: pointer;
+    right:5px;
+    outline-width: 0;
+    background-color:rgb(30, 129, 243);
 }
 
-
+form button.nameButton:active{
+    background-color:rgb(26, 96, 177);
+}
