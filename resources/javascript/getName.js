@@ -3,6 +3,7 @@ $(document).ready(function(){
     let chrCont = 2000;
     $('.nameButton').click(function(){
         //text submitted
+        $('#spamCont').html('<ul id="spamCont"></ul>')
         const NAME_GOT = document.getElementById("trimText");
         const NAME_ARR = [...NAME_GOT.value];
         let spamMess = [];

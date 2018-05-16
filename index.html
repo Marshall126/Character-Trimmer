@@ -3,14 +3,12 @@
   <head>
     <meta charset="UTF-8">
     <title>Discord Spam Helper</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" rel="stylesheet">
     <link href="./resources/css/style.css" rel="stylesheet">
   </head>
   <body>
     <form class="naGot" onsubmit="return false">
-        Text to be trimmed <br>
-        <input id="trimText" type="text">
-        <input type="submit" class="nameButton"></button>
+        <textarea placeholder="text to be trimmed" id="trimText"></textarea>
+        <button class="nameButton"></button>
     </form>
     <p id="result">Trimmed text here</p>
     <ul id="spamCont"></ul>
