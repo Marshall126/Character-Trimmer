@@ -10,9 +10,10 @@ $(document).ready(function(){
         for(let i=0; i<NAME_ARR.length;i+=chrCont){
             spamMess.push([NAME_ARR.slice(i,chrCont+i)]);
             console.log(spamMess[i/chrCont]);
-            spamMess[i/chrCont].join(' ');
-            console.log(spamMess[i/chrCont].join('_'));
-            let spamDispl = `<li class="spam">${spamMess[i/chrCont]}</li>`;
+            let spamFin = spamMess[i/chrCont].join('');
+            //spamFin.join();
+            console.log(spamFin);
+            let spamDispl = `<li class="spam">${spamFin}</li>`;
             $('#spamCont').append(spamDispl);
         }
     });
