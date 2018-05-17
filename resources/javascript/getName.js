@@ -15,5 +15,4 @@ $(document).ready(function(){
             $('#spamCont').append(spamDispl);
         }
     });
-    $('.nameButton')
-})
+});
