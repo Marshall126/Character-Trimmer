@@ -13,6 +13,7 @@ $(document).ready(function(){
             let spamFin = spamMess[i/chrCont][0].join('');
             let spamDispl = `<li class="spam">${spamFin}</li>`;
             $('#spamCont').append(spamDispl);
-        }
+        }            
     });
 });
+
