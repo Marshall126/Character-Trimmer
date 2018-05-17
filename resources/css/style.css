@@ -18,15 +18,18 @@ form button.nameButton{
     width:50px;
     border:none;
     border-radius:10px;
-    position:relative;
+    position:absolute;
     color:white;
-    top:15px;
+    top:340px;
     cursor: pointer;
-    right:5px;
+    left:230px;
     outline-width: 0;
     background-color:rgb(30, 129, 243);
 }
-
+form button.nameButton:hover{
+  transition:transform 100ms ease-in-out;
+  transform:scale(1.25,1.25)
+}
 form button.nameButton:active{
     background-color:rgb(26, 96, 177);
 }

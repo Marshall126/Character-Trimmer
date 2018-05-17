@@ -15,15 +15,5 @@ $(document).ready(function(){
             $('#spamCont').append(spamDispl);
         }
     });
-    $('.nameButton').hover(function(){
-        $(this).animate({
-        'height':'25px',
-        'width':'67px'
-        }, function(){
-            $(this).animate({
-                'height':'20px',
-                'width':'60px'
-            })
-        });
-    })
+    $('.nameButton')
 })
