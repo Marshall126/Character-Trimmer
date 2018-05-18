@@ -6,7 +6,7 @@ $(document).ready(function(){
             var chrCont = chrVal;
         }else{
             var chrCont=2000;
-        }
+        } 
         //text submitted
         $('#spamCont').html('<ul id="spamCont"></ul>')
         const NAME_GOT = document.getElementById("trimText");
@@ -30,5 +30,31 @@ $(document).ready(function(){
             $('#spamCont').append(spamDispl);
         }            
     });
+    let dark = false;
+    $('#dark').click(function(){
+        if(dark==false){
+            $('body').css({
+                'background-color': 'rgb(51, 45, 45)',
+                'color':'white'
+            });
+            $('#dark').css({
+                'background-color': 'white',
+                'color':'rgb(51,45,45)'
+            });
+            document.getElementById('dark').innerHTML = 'Light';
+            dark = true;
+        }else{
+            $('body').css({
+                'background-color': 'white',
+                'color':'rgb(51,45,45)'
+            });
+            $('#dark').css({
+                'background-color': 'rgb(51,45,45)',
+                'color':'white'
+            });
+            document.getElementById('dark').innerHTML = 'Dark';
+            dark = false;
+        }
+    })
 });
 

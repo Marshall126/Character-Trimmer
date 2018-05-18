@@ -22,27 +22,50 @@ form textarea#trimText{
     padding:10px;
     border:none;
     resize: none;
-    background-color:rgba(25, 202, 173,0.5);
+    color:white;
+    background-color:rgb(25, 156, 134);
 }
-form button.nameButton{
+form textarea#trimText::placeholder{
+    color:white;
+    opacity:0.8;
+}
+form button{
     height:23px;
     width:57px;
     border:none;
+    outline-width: 0; 
+    cursor: pointer;   
+}
+form button.nameButton{
     border-radius:10px;
     position:absolute;
     color:white;
     top:335px;
-    cursor: pointer;
     right:20px;
-    outline-width: 0;
     background-color:rgb(30, 129, 243);
 }
-form button.nameButton:hover{
+form button.nameButton:hover, form button#dark:hover{
   transition:transform 100ms ease-in-out;
   transform:scale(1.2,1.2)
 }
+form button.nameButton, form button#dark{
+    transition:transform 100ms ease-in-out;
+}
 form button.nameButton:active{
     background-color:rgb(26, 96, 177);
+}
+#dark:active{
+    background-color:rgb(126, 126, 126);
+}
+form button#dark{
+    outline-width: 0;
+    border:none;
+    background-color:rgb(51,45,45);
+    color:white;
+    border-radius:10px;
+    padding:3px;
+    position:relative;
+    left:5px;
 }
 ul{
     display:flex;
