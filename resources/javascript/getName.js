@@ -1,7 +1,7 @@
 $(document).ready(function(){
     //number of characters to trim to
     $('.nameButton').click(function(){
-        let chrVal = parseInt(document.getElementById('trimAmnt').value);
+        let chrVal = Math.floor(document.getElementById('trimAmnt').value);
         if(isNaN(chrVal)==false && chrVal !==0){
             var chrCont = chrVal;
         }else{
