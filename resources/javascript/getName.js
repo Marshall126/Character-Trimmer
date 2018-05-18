@@ -1,7 +1,16 @@
 $(document).ready(function(){
     //number of characters to trim to
-    let chrCont = 2000;
+    let chrCont;
     $('.nameButton').click(function(){
+        let chrVal = document.getElementById('trimAmnt').value;
+        console.log(chrVal);
+        if(chrVal !== NaN && chrVal !==0){
+            chrCont = chrVal;
+        }else if(chrVal===undefined){
+            chrCont=2000;
+        }else{
+            alert('error');
+        }
         //text submitted
         $('#spamCont').html('<ul id="spamCont"></ul>')
         const NAME_GOT = document.getElementById("trimText");

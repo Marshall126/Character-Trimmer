@@ -4,6 +4,7 @@ body{
 p{
     text-align: center;
 }
+
 form textarea#trimText{
     border-radius: 25px;
     width:98%;
@@ -24,7 +25,7 @@ form button.nameButton{
     color:white;
     top:340px;
     cursor: pointer;
-    left:94%;
+    right:20px;
     outline-width: 0;
     background-color:rgb(30, 129, 243);
 }
@@ -53,4 +54,8 @@ ul ul{
     overflow-wrap:break-word;
     margin:5px;
     color:white;
+}
+#toDo{
+    position:relative;
+    top:30px;
 }
