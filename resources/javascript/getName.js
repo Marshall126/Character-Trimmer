@@ -1,15 +1,11 @@
 $(document).ready(function(){
     //number of characters to trim to
-    let chrCont;
     $('.nameButton').click(function(){
-        let chrVal = document.getElementById('trimAmnt').value;
-        console.log(chrVal);
-        if(chrVal !== NaN && chrVal !==0){
-            chrCont = chrVal;
-        }else if(chrVal===undefined){
-            chrCont=2000;
+        let chrVal = parseInt(document.getElementById('trimAmnt').value);
+        if(isNaN(chrVal)==false && chrVal !==0){
+            var chrCont = chrVal;
         }else{
-            alert('error');
+            var chrCont=2000;
         }
         //text submitted
         $('#spamCont').html('<ul id="spamCont"></ul>')
@@ -19,6 +15,16 @@ $(document).ready(function(){
         for(let i=0; i<NAME_ARR.length;i+=chrCont){
             spamMess.push([NAME_ARR.slice(i,chrCont+i)]);
             console.log(spamMess[i/chrCont]);
+            for(let j = 0; j<spamMess[i/chrCont][0].length; j++){
+                switch(spamMess[i/chrCont][0][j]){
+                    case '<':
+                    spamMess[i/chrCont][0][j] = '&lt';
+                    break;
+                    case '>':
+                    spamMess[i/chrCont][0][j] = '&gt';
+                    break;
+                }
+            }
             let spamFin = spamMess[i/chrCont][0].join('');
             let spamDispl = `<li class="spam">${spamFin}</li>`;
             $('#spamCont').append(spamDispl);
