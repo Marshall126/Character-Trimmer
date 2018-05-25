@@ -34,21 +34,22 @@ form button{
     width:57px;
     border:none;
     outline-width: 0; 
-    cursor: pointer;   
+    cursor: pointer;  
+    border-radius:10px; 
+    padding:3px;
 }
 form button.nameButton{
-    border-radius:10px;
     position:absolute;
     color:white;
     top:335px;
     right:20px;
     background-color:rgb(30, 129, 243);
 }
-form button.nameButton:hover, form button#dark:hover{
+form button:hover{
   transition:transform 100ms ease-in-out;
   transform:scale(1.2,1.2)
 }
-form button.nameButton, form button#dark{
+form button{
     transition:transform 100ms ease-in-out;
 }
 form button.nameButton:active{
@@ -57,15 +58,16 @@ form button.nameButton:active{
 #dark:active{
     background-color:rgb(126, 126, 126);
 }
+form button#dark, form button#emoji{
+    position:relative;
+    left:3px;
+}
 form button#dark{
-    outline-width: 0;
-    border:none;
     background-color:rgb(51,45,45);
     color:white;
-    border-radius:10px;
-    padding:3px;
-    position:relative;
-    left:5px;
+}
+form button#emoji{
+    left:7px;
 }
 ul{
     display:flex;
