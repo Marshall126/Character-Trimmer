@@ -66,9 +66,6 @@ form button#dark{
     background-color:rgb(51,45,45);
     color:white;
 }
-form button#emoji{
-    left:7px;
-}
 ul{
     display:flex;
     flex-wrap: wrap;
@@ -91,4 +88,20 @@ ul ul{
 #toDo{
     position:relative;
     top:30px;
+}
+@media only screen and (max-width:970px){
+    #trimText{
+        max-width:97%;
+    }
+    #spamCont{
+        padding:0;
+    }
+    .spam{
+        max-width: 45%;
+    }
+}
+@media only screen and (max-width:665px){
+    .spam{
+        max-width: 95%;
+    }
 }
