@@ -2,23 +2,30 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>Discord Spam Helper</title>
+    <title>Character Trimmer</title>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400" rel="stylesheet">
     <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
 <link rel="icon" href="./favicon.ico" type="image/x-icon">
     <link href="./resources/css/style.css" rel="stylesheet">
   </head>
   <body>
+    <div id="heading">
+      <h1>Character Trimmer</h1>
+    </div>
     <form class="naGot" onsubmit="return false">
-        <textarea placeholder="text to be trimmed" id="trimText"></textarea>
-        <span class="chrHead">Characters to trim to:</span>
-        <input autocomplete="off" placeholder="2000"type="text" id="trimAmnt">
-        <button id="dark">Dark</button>
-        <button class="nameButton">Trim</button>
+        <div class="textArr">
+          <textarea data-gramm_editor="false" placeholder="text to be trimmed" id="trimText"></textarea>          
+        </div>
+        <div class="buttonRow">
+          <span class="chrHead">Characters to trim to:</span>
+          <input autocomplete="off" placeholder="2000"type="text" id="trimAmnt">
+          <button id="dark">Dark</button>
+          <button class="nameButton">Trim</button>
+        </div>
     </form>
     <p id="result">Trimmed text here</p>
     <ul id="spamCont"></ul>
-    <span id="toDo">To do list:<br>Make it adaptive<br>Add heading</span>
+    <span id="toDo">To do list:<br>Make it adaptive</span>
             <script
             src="https://code.jquery.com/jquery-3.3.1.min.js"
             integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="

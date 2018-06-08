@@ -30,6 +30,7 @@ $(document).ready(function(){
             $('#spamCont').append(spamDispl);
         }            
     });
+    //dark mode
     let dark = false;
     $('#dark').click(function(){
         if(dark==false){
@@ -37,6 +38,7 @@ $(document).ready(function(){
                 'background-color': 'rgb(51, 45, 45)',
                 'color':'white'
             });
+            
             $('#dark').css({
                 'background-color': 'white',
                 'color':'rgb(51,45,45)'
