@@ -2,56 +2,62 @@
 body{
     font-family:'Open sans', sans-serif;
     margin:0;
+    
+}
+h1{
+    font-size:30px;
+    font-weight:bold;
 }
 p{
     text-align: center;
 }
 #heading{
     text-align:center;
-    margin-bottom:5px;
-    height:50px;
+    height:40px;
     color:white;
     background-color:rgb(19, 133, 153);
-}
-h1{
-    margin:0;
+    padding-top:5px;
+    
 }
 form{
-    margin:5px;
+    padding:0;
+    height:343px;
 }
-form .textArr{
-    width:97%;
-     margin:auto;
-}
-form .textArr textarea#trimText{
-    border-radius: 25px;
-    min-height:1rem;
-    width:97%;
-    margin:auto;
+form textarea#trimText{
     height:300px;
     outline-width:0;
-    padding:10px;
     border:none;
+    font-size:1.2rem;
+    padding:0.5%;
+    padding-top:5px;
     resize: none;
     color:white;
     background-color:rgb(25, 156, 134);
+    width:99%;
 }
-form .textArr textarea#trimText::placeholder{
+form textarea#trimText::placeholder{
     color:white;
     opacity:0.8;
 }
+form .buttonRow{
+    background-color:rgb(45, 233, 123);
+    position: relative;
+    bottom: 5px;
+    padding:5px;
+}
 form .buttonRow input{
     outline-width: 0;
-    margin:auto;
+    font-family:'Open sans', sans-serif;
+    margin:0 auto;
     border:none;
-    background-color:rgb(45, 233, 123);
+    background-color:rgba(27, 109, 61, 0.3);
     border-radius:10px;
     font-size:1rem;
-    padding:2px;
+    padding:3px;
 
 }
 form button{
-    height:23px;
+    height:25px;
     width:57px;
     border:none;
     outline-width: 0; 
@@ -63,7 +69,7 @@ form button.nameButton{
     position:relative;
     color:white;
     float:right;
-    margin-right:25px;
+    margin-right:5px;
     background-color:rgb(30, 129, 243);
 }
 form button:hover{
@@ -76,51 +82,18 @@ form button{
 form button.nameButton:active{
     background-color:rgb(26, 96, 177);
 }
-#dark:active{
-    background-color:rgb(126, 126, 126);
-}
-form button#dark, form button#emoji{
-    position:relative;
-    left:3px;
-}
-form button#dark{
-    background-color:rgb(51,45,45);
-    color:white;
-}
-ul{
-    display:flex;
-    flex-wrap: wrap;
-}
 ul ul{
     display:none;
 }
+
 .spam{
-    font-size:12px;
+    font-size:1rem;
     background-color:rgb(194, 77, 77);
-    border-radius:25px;
-    width:fit-content;
-    max-width:30%;
-    padding:10px;
+    width:99%;
+    padding-top:5px;
+    padding:0.5%;
     list-style-type: none;
     overflow-wrap:break-word;
-    margin:5px;
     color:white;
-}
-#toDo{
-    position:relative;
-    top:30px;
-}
-@media only screen and (max-width:970px){
-    
-    #spamCont{
-        padding:0;
-    }
-    .spam{
-        max-width: 45%;
-    }
-}
-@media only screen and (max-width:665px){
-    .spam{
-        max-width: 95%;
-    }
+    border-bottom: 5px rgb(161, 60, 60) solid;
 }

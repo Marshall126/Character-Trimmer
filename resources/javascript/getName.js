@@ -8,55 +8,28 @@ $(document).ready(function(){
             var chrCont=2000;
         } 
         //text submitted
-        $('#spamCont').html('<ul id="spamCont"></ul>')
+        $('#spamCont').html('<ul id="spamCont"></ul>');
         const NAME_GOT = document.getElementById("trimText");
+        //put all characters into an array
         const NAME_ARR = [...NAME_GOT.value];
-        let spamMess = [];
+        let spamArr = [];
+        //make a new array which is only as long as chrCont
         for(let i=0; i<NAME_ARR.length;i+=chrCont){
-            spamMess.push([NAME_ARR.slice(i,chrCont+i)]);
-            console.log(spamMess[i/chrCont]);
-            for(let j = 0; j<spamMess[i/chrCont][0].length; j++){
-                switch(spamMess[i/chrCont][0][j]){
+            spamArr.push([NAME_ARR.slice(i,chrCont+i)]);
+            for(let j = 0; j<spamArr[i/chrCont][0].length; j++){
+                //replace all < and > with unicode
+                switch(spamArr[i/chrCont][0][j]){
                     case '<':
-                    spamMess[i/chrCont][0][j] = '&lt';
+                    spamArr[i/chrCont][0][j] = '&lt';
                     break;
                     case '>':
-                    spamMess[i/chrCont][0][j] = '&gt';
+                    spamArr[i/chrCont][0][j] = '&gt';
                     break;
                 }
             }
-            let spamFin = spamMess[i/chrCont][0].join('');
-            let spamDispl = `<li class="spam">${spamFin}</li>`;
+            //convert the array into a string in an html element
+            let spamDispl = `<li class="spam">${spamArr[i/chrCont][0].join('')}</li>`;
             $('#spamCont').append(spamDispl);
         }            
     });
-    //dark mode
-    let dark = false;
-    $('#dark').click(function(){
-        if(dark==false){
-            $('body').css({
-                'background-color': 'rgb(51, 45, 45)',
-                'color':'white'
-            });
-            
-            $('#dark').css({
-                'background-color': 'white',
-                'color':'rgb(51,45,45)'
-            });
-            document.getElementById('dark').innerHTML = 'Light';
-            dark = true;
-        }else{
-            $('body').css({
-                'background-color': 'white',
-                'color':'rgb(51,45,45)'
-            });
-            $('#dark').css({
-                'background-color': 'rgb(51,45,45)',
-                'color':'white'
-            });
-            document.getElementById('dark').innerHTML = 'Dark';
-            dark = false;
-        }
-    })
 });
-
