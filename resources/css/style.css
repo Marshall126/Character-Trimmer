@@ -2,7 +2,7 @@
 body{
     font-family:'Open sans', sans-serif;
     margin:0;
-    
+    font-size:12px;
 }
 h1{
     font-size:30px;
@@ -21,13 +21,15 @@ p{
 }
 form{
     padding:0;
+    position: relative;
+    bottom:2px;
     height:343px;
 }
 form textarea#trimText{
     height:300px;
     outline-width:0;
     border:none;
-    font-size:1.2rem;
+    font-size:1rem;
     padding:0.5%;
     padding-top:5px;
     resize: none;
@@ -44,6 +46,7 @@ form .buttonRow{
     position: relative;
     bottom: 5px;
     padding:5px;
+    font-size:1rem;
 }
 form .buttonRow input{
     outline-width: 0;
